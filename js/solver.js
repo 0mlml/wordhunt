@@ -74,8 +74,15 @@ class Solver {
   }
 
   #highlightGridElements(solution) {
-    for (const idx of solution) {
-      this.gridElement.children[idx].style.backgroundColor = 'green';
+    const getColor = (idx, total) => {
+      const hue = 120;
+      const lightness = 90 - (idx / total) * 60;
+      return `hsl(${hue}, 100%, ${lightness}%)`;
+    };
+
+    for (const [idx, cellIdx] of solution.entries()) {
+      const color = getColor(idx, solution.length);
+      this.gridElement.children[cellIdx].style.backgroundColor = color;
     }
   }
 
