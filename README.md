@@ -1,6 +1,8 @@
 # Word Hunt Solver
 
-A Word Hunt Solver web application that helps users find words in a 4x4 grid. The solver uses a depth-first search algorithm and a trie data structure to efficiently find valid words according to the rules of the Word Hunt game.
+A Word Hunt Solver web application that helps users find words in a 4x4 grid. The solver uses a depth-first search algorithm and a trie data structure to efficiently find valid words.
+
+It is designed for the iMessage "Game Pigeon" game "Word Hunt". 
 
 ![Screenshot of Word Hunt Solver](https://raw.githubusercontent.com/0mlml/wordhunt/main/img/screenshot.png)
 
