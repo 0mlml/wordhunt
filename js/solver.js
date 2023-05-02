@@ -259,6 +259,14 @@ class Solver {
 		}
 	}
 
+	#updateScoreElement() {
+		const scoreElement = document.getElementById('score');
+		if (scoreElement) {
+			const scores = [0, 0, 0, 100, 400, 800, 1400, 1800, 2200, 2600, 3000, 3400];
+			scoreElement.innerText = this.results.map(result => scores[result.length]).reduce((a, b) => a + b, 0);
+		}
+	}
+
 	startSolving() {
 		this.stopped = false;
 		this.results = [];
@@ -324,6 +332,7 @@ class Solver {
 		this.#updateNodesElement();
 		this.#pruneDuplicateResults();
 		this.#updateResultsElement();
+		this.#updateScoreElement();
 
 		this.#updateTimeElement(start);
 	}

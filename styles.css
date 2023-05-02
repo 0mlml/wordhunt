@@ -127,3 +127,12 @@ footer {
 	display       : flex;
 	flex-direction: row;
 }
+
+.stat {
+	display       : flex;
+	flex-direction: row;
+}
+
+.stat>p {
+	margin-left: 0.4ex;
+}
