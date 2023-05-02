@@ -115,6 +115,8 @@ class Solver {
   updateInput(input) {
     this.input = input;
     this.#resetGridElement();
+    this.results = [];
+    this.nodes = 0;
   }
 
   getMatrixFromInput() {
@@ -126,9 +128,7 @@ class Solver {
   }
 
   #resetResultsElement() {
-    for (const child of this.resultsElement.children) {
-      child.remove();
-    }
+    this.resultsElement.innerHTML = '';
   }
 
   #updateResultsElement() {
@@ -203,7 +203,6 @@ class Solver {
           if (ni >= 0 && ni < 4 && nj >= 0 && nj < 4) {
             dfs(ni, nj, path);
             this.nodes++;
-            this.#updateNodesElement();
           }
         }
       }
@@ -219,6 +218,7 @@ class Solver {
     }
 
     this.#resetResultsElement();
+    this.#updateNodesElement();
     this.#pruneDuplicateResults();
     this.#updateResultsElement();
 

@@ -12,7 +12,6 @@ solver.startSolving();
 solveElement.addEventListener('click', () => {
   if (!solver.stopped) {
     solver.stopSolving();
-    return;
   }
   if (inputElement.value.length !== 16) {
     alert('Input must be 16 characters long');
