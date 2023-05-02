@@ -17,7 +17,7 @@ You can try the live demo of the application at [https://0mlml.github.io/wordhun
 - Highlights the path of each word in the grid with a gradient from light to dark green
 - Trie data structure for efficient word lookup
 - Depth-first search algorithm to find valid words in the grid
-- Heuristically finds the best solutions by prioritizing longer words and simpler shapes
+- Heuristically finds the best solutions by prioritizing longer words
 
 ## How to Use
 
