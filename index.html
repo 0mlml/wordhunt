@@ -2,11 +2,11 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Word Hunt Solver</title>
 
-	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
@@ -17,7 +17,8 @@
 		<section class="flex">
 			<div>
 				<div class="stat">
-					Current: <p id="current-word">----</p>
+					Current:
+					<p id="current-word">----</p>
 				</div>
 				<div id="grid">
 					<div class="grid-item">1</div>
@@ -41,29 +42,34 @@
 			</div>
 			<div>
 				<h2>Results</h2>
-				<ul id="results-list">
-				</ul>
-				<div class="stat">Nodes: <p id="nodes">0</p>
+				<ul id="results-list"></ul>
+				<div class="stat">
+					Nodes:
+					<p id="nodes">0</p>
 				</div>
-				<div class="stat">Time: <p id="time">-ms</p>
+				<div class="stat">
+					Time:
+					<p id="time">-ms</p>
 				</div>
-				<div class="stat">Max score: <p id="score">0</p>
+				<div class="stat">
+					Max score:
+					<p id="score">0</p>
 				</div>
 			</div>
 		</section>
 		<section class="below">
 			<h2>Enter Grid</h2>
 			<div class="form">
-				<input id="grid-input" maxlength="16" type="text">
+				<input id="grid-input" maxlength="25" type="text" />
 				<button id="solve-button">Solve</button>
 				<div class="checkbox-group">
 					<div>
 						<label for="show-gradient">Show Gradient</label>
-						<input id="show-gradient" type="checkbox" checked="checked">
+						<input id="show-gradient" type="checkbox" checked="checked" />
 					</div>
 					<div>
 						<label for="show-line">Show Line</label>
-						<input id="show-line" type="checkbox" checked="checked">
+						<input id="show-line" type="checkbox" checked="checked" />
 					</div>
 				</div>
 			</div>

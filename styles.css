@@ -116,11 +116,15 @@ footer {
 
 .grid-item {
 	background-color: #ccc;
-	outline         : 2px solid #333;
+	outline         : 2px solid #666;
 	display         : flex;
 	font-size       : 32px;
 	justify-content : center;
 	align-items     : center;
+}
+
+.grid-void {
+	background-color: #333;
 }
 
 .checkbox-group {
