@@ -122,6 +122,8 @@ class Solver {
 		this.results = [];
 		this.stopped = false;
 		this.nodes = 0;
+
+		document.addEventListener('resize', this.displayLastSolution);
 	}
 
 	#resetGridElement() {
@@ -147,11 +149,13 @@ class Solver {
 			this.gridElement.style.gridTemplateRows = `repeat(${this.layout.height}, 1fr)`;
 		}
 
+		const isDarkTheme = document.getElementById("dark-theme-toggle").checked;
+
 		let idx = 0;
 		for (const n in this.gridElement.children) {
 			if (this.layout.tilemap[n] === TILE) {
 				this.gridElement.children[n].innerText = this.input[idx];
-				this.gridElement.children[n].style.backgroundColor = "#ccc";
+				this.gridElement.children[n].style.backgroundColor = isDarkTheme ? "#666" : "#ccc";
 				idx++;
 			} else {
 				continue;
@@ -230,6 +234,8 @@ class Solver {
 
 	#highlightGridElements(solution) {
 		const showGradientElement = document.getElementById("show-gradient");
+		const isDarkTheme = document.getElementById("dark-theme-toggle").checked;
+
 
 		const getColor = (idx, total) => {
 			const hue = 120;
@@ -238,7 +244,7 @@ class Solver {
 				return `hsl(${hue}, 100%, 90%)`;
 			}
 
-			const lightness = 90 - (idx / total) * 60;
+			const lightness = isDarkTheme ? 50 - (idx / total) * 40 : 90 - (idx / total) * 60;
 			return `hsl(${hue}, 100%, ${lightness}%)`;
 		};
 
@@ -255,6 +261,7 @@ class Solver {
 	}
 
 	displayLastSolution() {
+		this.#resetGridElement();
 		if (this.lastShown) {
 			this.#showSolution(this.lastShown);
 		}

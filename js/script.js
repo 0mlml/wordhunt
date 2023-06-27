@@ -46,6 +46,7 @@ solveElement.addEventListener("click", () => {
 
 const showGradientElement = document.getElementById("show-gradient");
 const showLineElement = document.getElementById("show-line");
+const darkThemeElement = document.getElementById("dark-theme-toggle");
 
 const optionChangeListener = () => {
 	solver.displayLastSolution();
@@ -53,3 +54,15 @@ const optionChangeListener = () => {
 
 showGradientElement.addEventListener("change", optionChangeListener);
 showLineElement.addEventListener("change", optionChangeListener);
+darkThemeElement.addEventListener("change", optionChangeListener);
+
+const darkThemeLink = document.getElementById("dark-theme");
+
+if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+	darkThemeLink.disabled = false;
+	darkThemeElement.checked = true;
+}
+
+darkThemeElement.addEventListener("change", () => {
+	darkThemeLink.disabled = !darkThemeElement.checked;
+});

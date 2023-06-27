@@ -10,12 +10,12 @@ ul {
 body {
 	font-family     : Arial, sans-serif;
 	line-height     : 1.6;
-	background-color: #f4f4f4;
-	color           : #333;
+	background-color: #333;
+	color           : #f4f4f4;
 }
 
 header {
-	background-color: #333;
+	background-color: #555;
 	color           : #fff;
 	text-align      : center;
 	padding         : 1rem 0;
@@ -25,8 +25,8 @@ main {
 	max-width       : 800px;
 	margin          : 2rem auto;
 	padding         : 1rem;
-	background-color: #fff;
-	box-shadow      : 0 0 10px rgba(0, 0, 0, 0.1);
+	background-color: #444;
+	box-shadow      : 0 0 10px rgba(255, 255, 255, 0.1);
 }
 
 section.flex {
@@ -57,10 +57,12 @@ div.form {
 input[type='text'] {
 	resize       : none;
 	margin-bottom: 1rem;
+	background   : #555;
+	color        : #f4f4f4;
 }
 
 button {
-	background-color: #333;
+	background-color: #555;
 	color           : #fff;
 	padding         : 0.5rem;
 	cursor          : pointer;
@@ -68,28 +70,29 @@ button {
 }
 
 button:hover {
-	background-color: #555;
+	background-color: #777;
 }
 
 #results-list {
 	list-style-type : none;
 	background-color: #555;
 	aspect-ratio    : 1.2;
-	border          : 1px solid #333;
+	border          : 1px solid #444;
 	overflow-y      : scroll;
 }
 
 #results-list li {
-	background-color: #f4f4f4;
+	background-color: #333;
 	padding-left    : 0.5rem;
+	color           : #f4f4f4;
 }
 
 #results-list li:hover {
-	background-color: #ccc;
+	background-color: #444;
 }
 
 footer {
-	background-color: #333;
+	background-color: #555;
 	color           : #fff;
 	text-align      : center;
 	padding         : 1rem 0;
@@ -114,8 +117,8 @@ footer {
 }
 
 .grid-item {
-	background-color: #ccc;
-	outline         : 2px solid #666;
+	background-color: #666;
+	outline         : 2px solid #888;
 	display         : flex;
 	font-size       : 32px;
 	justify-content : center;
@@ -123,7 +126,7 @@ footer {
 }
 
 .grid-void {
-	background-color: #333;
+	background-color: #000;
 }
 
 .checkbox-group {
@@ -132,8 +135,8 @@ footer {
 }
 
 .checkbox-group>div {
-	display:flex;
-	flex-direction:row;
+	display       : flex;
+	flex-direction: row;
 }
 
 .stat {
