@@ -8,7 +8,7 @@ It is designed for the iMessage "Game Pigeon" game "Word Hunt".
 
 ## Live Demo
 
-You can try the live demo of the application at [https://0mlml.github.io/wordhunt](https://0mlml.github.io/wordhunt)
+You can try the live demo of the application [here](https://www.mlml.dev/wordhunt)
 
 ## Features
 
